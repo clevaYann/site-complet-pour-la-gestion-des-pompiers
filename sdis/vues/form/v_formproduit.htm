@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+	  <div class="col-lg-12">
+	      <div class="page-header">
+	         <h2> Administration : formulaire ajout postulant Sapeur</h2>
+	      </div>
+	</div>
+</div>
+
+<form class="form-horizontal" action="index.php?controleur=gererAdministration&action=traitementAjoutSapeur" method="post">
+  <fieldset>
+    <legend>Compléter ce formulaire pour ajouter un postulant dans la base de données</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Entrez l'email</label>
+      <div class="col-lg-6">
+        <input class="form-control" id="inputEmail" name="email1" placeholder="Email" type="email" required="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ConfirEmail" class="col-lg-2 control-label">Email <span class="small">(vérification)</span></label>
+      <div class="col-lg-6">
+        <input class="form-control" id="ConfirEmail" name="email2" placeholder="Confirmer l'email" type="email" required="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Brevet de secouriste ?</label>
+      <div class="col-lg-2">
+        <div class="radio">
+          <label>
+            <input type="radio" name="brevet" value="oui" checked><label for="oui"> oui </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="brevet" value="non" ><label for="non"> non </label>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Indiquez l'âge</label>
+      <div class="col-lg-2">
+        <select class="form-control" name="age">
+        	<option value="16-18">entre 16 et 18 ans</option>
+        	<option value="18-25">entre 18 et 25 ans</option>
+        	<option value="25-40">entre 25 et 40 ans</option>
+        	<option value=">40">plus de 40 ans</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Annuler</button>
+        <button type="submit" name="inscription" class="btn btn-warning">Ajout</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
